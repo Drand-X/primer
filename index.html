@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название Компании | Главная</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Шапка -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">LOGO</a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-blue-600 font-medium">Главная</a>
+                    <a href="services.html" class="text-gray-500 hover:text-blue-600 transition">Услуги</a>
+                    <a href="price.html" class="text-gray-500 hover:text-blue-600 transition">Прайс</a>
+                    <a href="contacts.html" class="text-gray-500 hover:text-blue-600 transition">Контакты</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-blue-600 font-medium">Главная</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Услуги</a>
+                <a href="price.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Прайс</a>
+                <a href="contacts.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="pt-16">
+        <section class="bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 lg:pr-8">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        Качественные услуги <br>
+                        <span class="text-blue-600">для вашего бизнеса</span>
+                    </h1>
+                    <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl lg:mx-0">
+                        Решаем ваши задачи быстро, стильно и с фокусом на результат. Оставьте заявку, и мы свяжемся с вами за 1 минуту.
+                    </p>
+                    <div class="mt-8 sm:flex">
+                        <div class="rounded-md shadow">
+                            <a href="#contact-form" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition">
+                                Обсудить проект
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 lg:mt-0 lg:w-1/2">
+                    <div class="bg-gray-200 rounded-lg shadow-lg w-full h-64 sm:h-80 lg:h-96 flex items-center justify-center text-gray-400">
+                        [ Место для тематического фото ]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-form" class="bg-gray-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-lg mx-auto lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-16">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h2 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">Оставьте заявку</h2>
+                        <p class="mt-3 text-lg text-gray-500">Мы перезвоним вам прямо сейчас.</p>
+                        <form id="tg-form" class="mt-8 space-y-6">
+                            <div>
+                                <label for="name" class="sr-only">Имя</label>
+                                <input type="text" id="name" required class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 border border-gray-300 rounded-md" placeholder="Ваше имя">
+                            </div>
+                            <div>
+                                <label for="phone" class="sr-only">Телефон</label>
+                                <input type="tel" id="phone" required class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 border border-gray-300 rounded-md" placeholder="Ваш телефон">
+                            </div>
+                            <button type="submit" class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition">
+                                Отправить заявку
+                            </button>
+                            <p id="success-msg" class="hidden text-green-600 text-sm mt-2 text-center">Заявка успешно отправлена!</p>
+                        </form>
+                    </div>
+                    <div class="mt-12 lg:mt-0">
+                        <h2 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">Наши контакты</h2>
+                        <div class="mt-8 text-lg text-gray-500 space-y-4">
+                            <p>📞 +7 (999) 000-00-00</p>
+                            <p>✉️ info@company.ru</p>
+                            <p>📍 г. Москва, ул. Примерная, д. 1</p>
+                        </div>
+                        <div class="mt-8 bg-gray-200 rounded-lg h-64 flex items-center justify-center text-gray-400 overflow-hidden shadow-inner">
+                            [ Интерактивная карта ]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <p class="text-base text-gray-400">&copy; 2026 Название Компании.</p>
+            <p class="text-sm text-gray-500">Разработка: Digital Work</p>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
+
+        const tgForm = document.getElementById('tg-form');
+        if(tgForm) {
+            tgForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const token = 'ТВОЙ_ТОКЕН_ОТ_BOTFATHER';
+                const chatId = 'ТВОЙ_CHAT_ID';
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const message = `🔥 Новая заявка с сайта!\nИмя: ${name}\nТелефон: ${phone}`;
+                const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+                
+                const btnSubmit = this.querySelector('button[type="submit"]');
+                const msg = document.getElementById('success-msg');
+                btnSubmit.textContent = 'Отправка...';
+                btnSubmit.disabled = true;
+                
+                fetch(url).then(response => {
+                    if(response.ok) {
+                        btnSubmit.textContent = 'Отправить заявку';
+                        btnSubmit.disabled = false;
+                        msg.classList.remove('hidden');
+                        this.reset();
+                        setTimeout(() => msg.classList.add('hidden'), 3000);
+                    } else {
+                        alert('Ошибка отправки. Проверьте токен и Chat ID.');
+                        btnSubmit.textContent = 'Отправить заявку';
+                        btnSubmit.disabled = false;
+                    }
+                }).catch(error => {
+                    alert('Ошибка сети.');
+                    btnSubmit.textContent = 'Отправить заявку';
+                    btnSubmit.disabled = false;
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название Компании | Контакты</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-600 hover:text-blue-600 transition">LOGO</a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-blue-600 transition">Главная</a>
+                    <a href="services.html" class="text-gray-500 hover:text-blue-600 transition">Услуги</a>
+                    <a href="price.html" class="text-gray-500 hover:text-blue-600 transition">Прайс</a>
+                    <a href="contacts.html" class="text-blue-600 font-medium">Контакты</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Главная</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Услуги</a>
+                <a href="price.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Прайс</a>
+                <a href="contacts.html" class="block px-3 py-2 text-blue-600 font-medium">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16 pb-20 bg-white min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+            <div class="text-center mb-16">
+                <h1 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Свяжитесь с нами</h1>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Мы всегда рады ответить на ваши вопросы и обсудить проект.</p>
+            </div>
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-start">
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">Контактная информация</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <span class="text-2xl mr-4">📍</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Адрес офиса:</p>
+                                <p class="text-gray-600 mt-1">г. Москва, Пресненская набережная, д. 12<br>Башня "Федерация", офис 45</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-2xl mr-4">📞</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Телефон:</p>
+                                <p class="text-gray-600 mt-1"><a href="tel:+74950000000" class="hover:text-blue-600">+7 (495) 000-00-00</a></p>
+                                <p class="text-sm text-gray-500 mt-1">Пн-Пт с 9:00 до 19:00</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-2xl mr-4">✉️</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Email:</p>
+                                <p class="text-gray-600 mt-1"><a href="mailto:hello@company.ru" class="hover:text-blue-600">hello@company.ru</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 pt-8 border-t border-gray-200">
+                        <a href="index.html#contact-form" class="inline-flex justify-center w-full py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition">
+                            Оставить заявку онлайн
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0 h-full min-h-[400px]">
+                    <div class="w-full h-full bg-gray-200 rounded-2xl overflow-hidden shadow-inner border border-gray-200 flex flex-col items-center justify-center text-gray-500 relative">
+                        <span class="text-4xl mb-2">🗺️</span>
+                        <p class="font-medium text-lg">Интерактивная карта</p>
+                        <p class="text-sm mt-2 text-center px-4">Сюда вставляется iframe код из Яндекс.Карт или Google Maps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <p class="text-base text-gray-400">&copy; 2026 Название Компании.</p>
+            <p class="text-sm text-gray-500">Разработка: Digital Work</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
+    </script>
+</body>
+</html>

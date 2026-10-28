@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название Компании | Услуги</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-600 hover:text-blue-600 transition">LOGO</a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-blue-600 transition">Главная</a>
+                    <a href="services.html" class="text-blue-600 font-medium">Услуги</a>
+                    <a href="price.html" class="text-gray-500 hover:text-blue-600 transition">Прайс</a>
+                    <a href="contacts.html" class="text-gray-500 hover:text-blue-600 transition">Контакты</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Главная</a>
+                <a href="services.html" class="block px-3 py-2 text-blue-600 font-medium">Услуги</a>
+                <a href="price.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Прайс</a>
+                <a href="contacts.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16 pb-20 bg-gray-50 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+            <div class="text-center">
+                <h1 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Наши услуги</h1>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Комплексные решения для роста вашего бизнеса.</p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mb-6">🚀</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Быстрый старт</h3>
+                    <p class="text-gray-500 mb-6">Запуск базового проекта за 3 дня с полной настройкой всех необходимых интеграций.</p>
+                    <a href="index.html#contact-form" class="text-blue-600 font-semibold hover:text-blue-700">Заказать &rarr;</a>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 border border-gray-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">ХИТ</div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mb-6">📈</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Комплексное SEO</h3>
+                    <p class="text-gray-500 mb-6">Оптимизация структуры и контента для вывода вашего сайта в топ Яндекса и Google.</p>
+                    <a href="index.html#contact-form" class="text-blue-600 font-semibold hover:text-blue-700">Заказать &rarr;</a>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mb-6">⚙️</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Поддержка 24/7</h3>
+                    <p class="text-gray-500 mb-6">Техническое обслуживание, внесение правок и контроль работоспособности серверов.</p>
+                    <a href="index.html#contact-form" class="text-blue-600 font-semibold hover:text-blue-700">Заказать &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <p class="text-base text-gray-400">&copy; 2026 Название Компании.</p>
+            <p class="text-sm text-gray-500">Разработка: Digital Work</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
+    </script>
+</body>
+</html>

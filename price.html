@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название Компании | Цены</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-600 hover:text-blue-600 transition">LOGO</a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-blue-600 transition">Главная</a>
+                    <a href="services.html" class="text-gray-500 hover:text-blue-600 transition">Услуги</a>
+                    <a href="price.html" class="text-blue-600 font-medium">Прайс</a>
+                    <a href="contacts.html" class="text-gray-500 hover:text-blue-600 transition">Контакты</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Главная</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Услуги</a>
+                <a href="price.html" class="block px-3 py-2 text-blue-600 font-medium">Прайс</a>
+                <a href="contacts.html" class="block px-3 py-2 text-gray-500 hover:text-blue-600">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16 pb-20 bg-white min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+            <div class="text-center">
+                <h1 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Прозрачные цены</h1>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Выберите тариф, который идеально подходит для ваших задач.</p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8 items-center">
+                <div class="bg-gray-50 rounded-2xl border border-gray-200 p-8 shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-900">Базовый</h3>
+                    <p class="mt-4 text-sm text-gray-500">Для старта проекта</p>
+                    <p class="mt-8"><span class="text-4xl font-extrabold text-gray-900">15 000 ₽</span></p>
+                    <ul class="mt-8 space-y-4 text-sm text-gray-600">
+                        <li class="flex items-center">✅ 1 страница (Лендинг)</li>
+                        <li class="flex items-center">✅ Адаптивная верстка</li>
+                        <li class="flex items-center text-gray-400">❌ Заявки в Telegram</li>
+                    </ul>
+                    <a href="index.html#contact-form" class="mt-8 block w-full bg-white border border-gray-300 rounded-md py-3 text-center text-sm font-semibold text-gray-700 hover:bg-gray-50">Выбрать</a>
+                </div>
+                <div class="bg-white rounded-2xl border-2 border-blue-600 p-8 shadow-xl relative lg:scale-105">
+                    <div class="absolute top-0 inset-x-0 flex justify-center -mt-3">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">Самый популярный</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900">Бизнес</h3>
+                    <p class="mt-4 text-sm text-gray-500">Идеально для продаж</p>
+                    <p class="mt-8"><span class="text-4xl font-extrabold text-gray-900">25 000 ₽</span></p>
+                    <ul class="mt-8 space-y-4 text-sm text-gray-600">
+                        <li class="flex items-center">✅ Многостраничный сайт</li>
+                        <li class="flex items-center">✅ Базовое SEO</li>
+                        <li class="flex items-center font-bold text-gray-900">✅ Заявки в Telegram</li>
+                    </ul>
+                    <a href="index.html#contact-form" class="mt-8 block w-full bg-blue-600 border border-transparent rounded-md py-3 text-center text-sm font-semibold text-white hover:bg-blue-700">Выбрать</a>
+                </div>
+                <div class="bg-gray-50 rounded-2xl border border-gray-200 p-8 shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-900">Премиум</h3>
+                    <p class="mt-4 text-sm text-gray-500">Всё включено</p>
+                    <p class="mt-8"><span class="text-4xl font-extrabold text-gray-900">45 000 ₽</span></p>
+                    <ul class="mt-8 space-y-4 text-sm text-gray-600">
+                        <li class="flex items-center">✅ Индивидуальный дизайн</li>
+                        <li class="flex items-center">✅ Сложные анимации</li>
+                        <li class="flex items-center">✅ Пожизненная поддержка</li>
+                    </ul>
+                    <a href="index.html#contact-form" class="mt-8 block w-full bg-white border border-gray-300 rounded-md py-3 text-center text-sm font-semibold text-gray-700 hover:bg-gray-50">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <p class="text-base text-gray-400">&copy; 2026 Название Компании.</p>
+            <p class="text-sm text-gray-500">Разработка: Digital Work</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
+    </script>
+</body>
+</html>
