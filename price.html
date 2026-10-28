@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Название Компании | Цены</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>html { scroll-behavior: smooth; }</style>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { opacity: 0; transition: opacity 0.3s ease-in-out; }
+        body.loaded { opacity: 1; }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
@@ -98,6 +102,26 @@
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         if(btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
+
+        // Плавное появление страницы
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Плавное затухание при переходах
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (!href || href.startsWith('#') || href.startsWith('http') || this.target === '_blank') return;
+                
+                e.preventDefault();
+                document.body.classList.remove('loaded');
+                
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 300);
+            });
+        });
     </script>
 </body>
 </html>
